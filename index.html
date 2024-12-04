@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Título de la página -->
+    <title>Cristóbal Moreno Henríquez - Desarrollador Web y de Software</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Portafolio de Cristóbal Moreno Henríquez, desarrollador web y de software especializado en e-commerce y soluciones digitales.">
+    <meta name="keywords" content="Cristóbal Moreno, desarrollador web, desarrollador de software, Shopify, e-commerce, programador, Chile">
+    <meta name="author" content="Cristóbal Moreno Henríquez">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Favicon para navegadores comunes (archivo .ico) -->
+<link rel="icon" href="img/favicon/favicon.ico" sizes="any">|
+
+<!-- Favicon en formato PNG para diferentes tamaños -->
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
+
+<!-- Apple Touch Icon para dispositivos Apple -->
+<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+
+<!-- Manifest para aplicaciones web progresivas (PWA) -->
+<link rel="manifest" href="img/favicon/manifest.webmanifest">
+
+
+    <!-- Metadata de Redes Sociales -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="Cristóbal Moreno Henríquez - Portafolio">
+    <meta property="og:description" content="Portafolio de Cristóbal Moreno Henríquez, desarrollador web y de software especializado en soluciones digitales y e-commerce.">
+    <meta property="og:url" content="https://cristobalmoreno.cl">
+    <meta property="og:image" content="https://cristobalmoreno.cl/img/favicon/og-image.jpg">
+
+    <!-- Estilos de la plantilla -->
+    <link rel="stylesheet" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- Colores del navegador -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+    <meta name="msapplication-navbutton-color" content="#111111">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+<!-- Google Translate Widget -->
+<div id="google_translate_element" style="display:none;"></div>
+    <!-- Cargador de la página -->
+ 
+
+    <!-- Encabezado -->
+    <header id="header" class="header d-flex justify-content-between">
+
+      <!-- Menú de navegación -->
+      <div class="header__navigation">
+        <nav id="menu" class="menu">
+          <ul class="menu__list d-flex justify-content-start">
+            <li class="menu__item">
+              <a class="menu__link btn" href="#home">
+                <span class="menu__caption">Inicio</span>
+                <i class="ph-bold ph-house-simple"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#portfolio">
+                <span class="menu__caption">Portafolio</span>
+                <i class="ph-bold ph-squares-four"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#about">
+                <span class="menu__caption">Sobre Mí</span>
+                <i class="ph-bold ph-user"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#resume">
+                <span class="menu__caption">Experiencia</span>
+                <i class="ph-bold ph-article"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#skills">
+                <span class="menu__caption">Tecnologías</span>
+                <i class="ph-bold ph-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+
+      <!-- Control del encabezado -->
+      <div class="header__controls d-flex justify-content-end">
+        <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="modo claro/oscuro" aria-checked="true"></button>
+     
+        
+      </div>
+
+    </header>
+
+        <!-- Image Background Layer Start -->
+        <div id="imageBackground" class="image-background" data-speed="0.4"></div>
+        <!-- Image Background Layer End -->
+
+    <!-- Bloque lateral de avatar -->
+    <div id="avatar" class="avatar">
+      <div class="avatar__container d-flex flex-column justify-content-lg-between">
+        <!-- Imagen y logo -->
+        <div class="avatar__block">
+          <div class="avatar__logo d-flex align-items-center">
+            <div class="logo__image">
+              <img id="logo" src="img/greencm.svg" alt="Logo de Cristóbal Moreno Henríquez">
+            </div>
+            <div class="logo__caption">
+              <p>Cristóbal<br>Moreno</p>
+            </div>
+          </div>
+          <div class="avatar__image" style="border-radius: 100%;">
+            <img src="img/profile.jpeg" alt="Foto de Cristóbal Moreno Henríquez">
+          </div>
+        </div>
+
+        <script>
+          const switcher = document.getElementById('color-switcher');
+          const logo = document.getElementById('logo');
+
+          const logoLight = 'img/greencm.svg';  
+          const logoDark = 'img/night-cm.svg'; 
+
+          let isDarkMode = false;
+
+          const updateLogo = () => {
+            logo.src = isDarkMode ? logoDark : logoLight;
+          };
+
+          switcher.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+
+            switcher.setAttribute('aria-checked', isDarkMode);
+
+            updateLogo();
+          });
+
+          updateLogo();
+
+        </script>
+        <!-- Especialización -->
+        <div class="avatar__block">
+          <div>
+            <small class="top" data-translate="smalltitle">Especialización:</small>
+            <h6 data-translate="title">Desarrollador Web y de Software</h6>
+          </div>
+        </div>
+        <br>
+        <!-- Ubicación -->
+        <div class="avatar__block">
+          <h6>
+            <small class="top">Email:</small>
+            cristobal.morenohz@gmail.com
+          </h6>
+        </div>
+        <br>
+        <div class="avatar__block">
+          <h6>
+            <small class="top">Teléfono:</small>
+            +569 7868 8266
+          </h6>
+        </div>
+        <br>
+      
+        <!-- Redes Sociales y Botón CTA -->
+        <div class="avatar__block">
+          <div class="avatar__socials">
+            <ul class="socials-square d-flex justify-content-between">
+              <li class="socials-square__item">
+                <a class="socials-square__link btn" href="https://www.linkedin.com/in/cristobalmorenohz/" target="_blank"><i class="ph-bold ph-linkedin-logo"></i></a>
+              </li>
+            
+            </ul>
+          </div>
+          <div class="avatar__btnholder">
+            <a class="btn btn-default btn-fullwidth btn-hover btn-hover-accent" href="downloads/cv_cristobal_moreno.pdf" target="_blank">
+              <span class="btn-caption">Descargar CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido de la Página -->
+    <div id="content" class="content">
+      <div class="content__wrapper">
+
+        <!-- Sección de Introducción -->
+        <section id="home" class="main intro">
+
+          <!-- Titular de la Página -->
+          <div id="headline" class="headline d-flex align-items-start flex-column" data-speed="1">
+            <p class="headline__subtitle animate-headline">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8 C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7 C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+              </svg>
+              <span data-translate="">¡Hola! Soy Cristóbal</span>
+            </p>
+            <h1 class="headline__title animate-headline">Desarrollador Web y de Software</h1>
+            <p class="headline__description animate-headline">
+              Apasionado por crear soluciones digitales de alta calidad y brindar experiencias innovadoras en el mundo del desarrollo web y software.
+            </p>
+            <div class="headline__btnholder d-flex flex-column flex-sm-row">
+              <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent animate-headline" href="#portfolio">
+                <span class="btn-caption">Ver Portafolio</span>
+                <i class="ph-bold ph-squares-four"></i>
+              </a>
+              <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline animate-headline" href="downloads/cv_cristobal_moreno.pdf" target="_blank">
+                <span class="btn-caption">Descargar CV</span>
+                <i class="ph-bold ph-download-simple"></i>
+              </a>
+            </div>
+          </div>
+
+        </section>
+
+              <!-- Portfolio Section Start -->
+              <section id="portfolio" class="inner inner-first portfolio">
+
+                <!-- Content Block - H2 Section Title Start -->
+                <div class="content__block section-grid-title">
+                  <p class="h2__subtitle animate-in-up">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
+                      <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                        C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                        C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+                    </svg>
+                    <span>Portafolio</span>
+                  </p>
+                  <h2 class="h2__title animate-in-up">Mis proyectos destacados</h2>
+                </div>
+                <!-- Content Block - H2 Section Title End -->
+      
+                 <!-- Content Block - Projects Start -->
+<div class="content__block grid-block">
+  <div class="container-fluid p-0">
+    <div class="row g-0 align-items-stretch cards">
+
+
+         <!-- Club Te Regalo Mi Auto -->
+         <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+          <div class="cards__card d-flex flex-column">
+            <div class="cards__descr">
+              <h4 class="cards__title animate-in-up">Club Te Regalo Mi Auto</h4>
+              <div class="cards__tags d-flex flex-wrap animate-in-up">
+                <span class="rounded-tag tag-outline">Nuxt.js</span>
+                <span class="rounded-tag tag-outline">Firebase</span>
+                <span class="rounded-tag tag-outline">TailwindCSS</span>
+                <span class="rounded-tag tag-outline">Node.js</span>
+                <span class="rounded-tag tag-outline">Stripe</span>
+                <span class="rounded-tag tag-outline">Vercel</span>
+                <span class="rounded-tag tag-outline">GitHub</span>
+  
+  
+  
+              </div>
+              <p class="small cards__text animate-in-up">
+                Plataforma creada desde cero para promocionar sorteos y beneficios mediante suscripciones. Desarrollado con Nuxt.js, Firebase, TailwindCSS, Node.js
+                incluye integración de Stripe para pagos y creación de APIs para comuniación del backend.
+              </p>
+  
+            </div>
+            <a href="https://clubteregalomiauto.com/" target="_blank" class="cards__image d-flex animate-in-up">
+              <img src="img/trabajos/www.clubteregalomiauto.com_.png" alt="Club Te Regalo Mi Auto">
+            </a>
+          </div>
+        </div>
+  
+        <!-- Genesis Partners -->
+        <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+          <div class="cards__card d-flex flex-column">
+            <div class="cards__descr">
+              <h4 class="cards__title animate-in-up">Genesis Partners</h4>
+              <div class="cards__tags d-flex flex-wrap animate-in-up">
+                <span class="rounded-tag tag-outline">Astro</span>
+                <span class="rounded-tag tag-outline">React</span>
+                <span class="rounded-tag tag-outline">NextUI</span>
+                <span class="rounded-tag tag-outline">TailwindCSS</span>
+                <span class="rounded-tag tag-outline">JavaScript</span>
+                <span class="rounded-tag tag-outline">GitHub</span>
+  
+  
+  
+              
+              </div>
+              <p class="small cards__text animate-in-up">
+                Sitio web moderno y eficiente desarrollado con Astro, integrando React, NextUI y JavaScript para componentes interactivos, estilización con Tailwind CSS, y optimización para rendimiento y SEO.
+              </p>
+            </div>
+            <a href="https://genesispartners.cl/" target="_blank" class="cards__image d-flex animate-in-up">
+              <img src="img/trabajos/genesispartners.cl_.png" alt="Genesis Partners">
+            </a>
+          </div>
+        </div>
+  
+  
+          <!-- VoltaSM -->
+          <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+            <div class="cards__card d-flex flex-column">
+              <div class="cards__descr">
+                <h4 class="cards__title animate-in-up">VoltaSM</h4>
+                <div class="cards__tags d-flex flex-wrap animate-in-up">
+                  <span class="rounded-tag tag-outline">HTML</span>
+                  <span class="rounded-tag tag-outline">Bootstrap</span>
+                  <span class="rounded-tag tag-outline">JavaScript</span>
+                </div>
+                <p class="small cards__text animate-in-up">
+                  Sitio web desarrollado con HTML, Bootstrap y JavaScript para empresa de productos y servicios de electromovilidad.
+                </p>
+              </div>
+              <a href="https://voltasm.com/" target="_blank" class="cards__image d-flex animate-in-up">
+                <img src="img/trabajos/voltasm.com_.png" alt="VoltaSM">
+              </a>
+            </div>
+          </div>
+
+
+
+      <!-- Project Card -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">Shining Collection</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Shopify</span>
+              <span class="rounded-tag tag-outline">Liquid</span>
+              <span class="rounded-tag tag-outline">HTML5</span>
+              <span class="rounded-tag tag-outline">CSS3</span>
+              <span class="rounded-tag tag-outline">JavaScript</span>
+              <span class="rounded-tag tag-outline">Custom Code</span>
+              <span class="rounded-tag tag-outline">Integración API</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+                Tienda online con diseño personalizado, secciones personalizadas en Liquid, configuración de apps y APIs para logística y pagos.
+            </p>
+          </div>
+          <a href="https://shiningcollection.cl/" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/shiningcollection.cl__.png" alt="Shining Collection">
+          </a>
+        </div>
+      </div>
+
+      <!-- Cubretuauto -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">Cubretuauto</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Shopify</span>
+              <span class="rounded-tag tag-outline">Liquid</span>
+              <span class="rounded-tag tag-outline">HTML5</span>
+              <span class="rounded-tag tag-outline">CSS3</span>
+              <span class="rounded-tag tag-outline">JavaScript</span>
+              <span class="rounded-tag tag-outline">Custom Code</span>
+              <span class="rounded-tag tag-outline">Integración API</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+                Tienda online con diseño personalizado, secciones personalizadas en Liquid, configuración de apps y APIs para logística y pagos.
+            </p>
+          </div>
+          <a href="https://cubretuauto.com/" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/cubretuauto.com_.png" alt="Cubretuauto">
+          </a>
+        </div>
+      </div>
+
+      <!-- Lovachocolates -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">Lovachocolates</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Shopify</span>
+              <span class="rounded-tag tag-outline">Liquid</span>
+              <span class="rounded-tag tag-outline">HTML5</span>
+              <span class="rounded-tag tag-outline">CSS3</span>
+              <span class="rounded-tag tag-outline">JavaScript</span>
+              <span class="rounded-tag tag-outline">Custom Code</span>
+              <span class="rounded-tag tag-outline">Integración API</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+                Tienda online con diseño personalizado, secciones personalizadas en Liquid, configuración de apps y APIs para logística y pagos.
+            </p>
+          </div>
+          <a href="https://www.lovachocolates.cl/" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/www.lovachocolates.cl_ (4).png" alt="Lovachocolates">
+          </a>
+        </div>
+      </div>
+
+      <!-- AIConcept -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">AI Concept</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Shopify</span>
+              <span class="rounded-tag tag-outline">Liquid</span>
+              <span class="rounded-tag tag-outline">HTML5</span>
+              <span class="rounded-tag tag-outline">CSS3</span>
+              <span class="rounded-tag tag-outline">JavaScript</span>
+              <span class="rounded-tag tag-outline">Custom Code</span>
+              <span class="rounded-tag tag-outline">Integración API</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+                Tienda online con diseño personalizado, secciones personalizadas en Liquid, configuración de apps y APIs para logística y pagos.
+            </p>
+          </div>
+          <a href="https://aiconcept.cl/" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/aiconcept.cl_.png" alt="AI Concept">
+          </a>
+        </div>
+      </div>
+
+      <!-- MomChic -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">MomChic</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Shopify</span>
+              <span class="rounded-tag tag-outline">Liquid</span>
+              <span class="rounded-tag tag-outline">HTML5</span>
+              <span class="rounded-tag tag-outline">CSS3</span>
+              <span class="rounded-tag tag-outline">JavaScript</span>
+              <span class="rounded-tag tag-outline">Custom Code</span>
+              <span class="rounded-tag tag-outline">Integración API</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+                Tienda online con diseño personalizado, secciones personalizadas en Liquid, configuración de apps y APIs para logística y pagos.
+            </p>
+          </div>
+          <a href="https://momchic.cl/" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/momchic.cl_.png" alt="MomChic">
+          </a>
+        </div>
+      </div>
+
+      <!-- AuraMay -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">AuraMay</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Shopify</span>
+              <span class="rounded-tag tag-outline">HTML5</span>
+              <span class="rounded-tag tag-outline">CSS3</span>
+              <span class="rounded-tag tag-outline">Custom Code</span>
+              <span class="rounded-tag tag-outline">Integración API</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+                Tienda online con diseño estándar, secciones personalizadas en Liquid, configuración de apps básica y API para pagos.
+            </p>
+          </div>
+          <a href="https://auramay.cl/" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/www.auramay.cl.png" alt="AuraMay">
+          </a>
+        </div>
+      </div>
+
+      <!-- OzmaGroup -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">OzmaGroup</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Webflow</span>
+              <span class="rounded-tag tag-outline">Embed Code</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+              Proyecto desarrollado en Webflow con uso de HTML, CSS3 y JS para agencia de Marketing Digital.
+            </p>
+          </div>
+          <a href="https://preview.webflow.com/preview/ozmagroup-89f893?utm_medium=preview_link&utm_source=designer&utm_content=ozmagroup-89f893&preview=fc0300ea8420969ada1dbbb7391e1317&workflow=preview" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/www.ozmagroup.cl.png" alt="OzmaGroup">
+          </a>
+        </div>
+      </div>
+
+      <!-- Coarfe -->
+      <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+        <div class="cards__card d-flex flex-column">
+          <div class="cards__descr">
+            <h4 class="cards__title animate-in-up">Coarfe</h4>
+            <div class="cards__tags d-flex flex-wrap animate-in-up">
+              <span class="rounded-tag tag-outline">Webflow</span>
+              <span class="rounded-tag tag-outline">Embed Code</span>
+            </div>
+            <p class="small cards__text animate-in-up">
+              Sitio web corporativo funcional creado con Webflow y personalización con HTML, CSS3 y JS para empresa de productos de embalajes.
+            </p>
+          </div>
+          <a href="https://www.coarfe.cl/" target="_blank" class="cards__image d-flex animate-in-up">
+            <img src="img/trabajos/www.coarfe.cl_.png" alt="Coarfe">
+          </a>
+        </div>
+      </div>
+
+     
+
+   
+
+        
+    </div>
+  </div>
+</div>
+<!-- Content Block - Projects End -->
+
+      
+              </section>
+              <!-- Portfolio Section End -->
+
+        <!-- Sección Sobre Mí -->
+        <section id="about" class="inner about">
+
+          <!-- Título Sobre Mí -->
+          <div class="content__block section-grid-title">
+            <p class="h2__subtitle animate-in-up">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8 C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7 C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+              </svg>
+              <span>Sobre Mí</span>
+            </p>
+            <h2 class="h2__title animate-in-up">Apasionado por la tecnología y el desarrollo</h2>
+          </div>
+
+          <!-- Descripción Sobre Mí -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0 justify-content-between">
+                
+                <!-- Descripción Personal -->
+                <div class="col-12 col-xl-8 grid-item about-descr">
+                  <p class="about-descr__text animate-in-up">
+                    Como profesional, mi principal motivación es ofrecer soluciones de calidad a mis clientes, mientras sigo desarrollándome y aprendiendo en cada proyecto.
+                  </p>
+                  <p class="about-descr__text animate-in-up">
+                     Disfruto transformar  y materializar ideas en proyectos reales. 
+                  </p>
+                  <p class="about-descr__text animate-in-up">
+                     Tengo la capacidad de aprendizaje rápido y una mentalidad orientada hacia los resultados, enfrentando cada desafío con dedicación y compromiso. 
+                  </p>
+                  <p class="about-descr__text animate-in-up">
+                    Aspiro a especializarme en Shopify y tecnologías avanzadas, mientras sigo perfeccionando mis habilidades para entregar resultados y soluciones innovadoras y con un impacto positivo en cada proyecto que realizo.
+
+                  </p>
+                  <div class="btn-group about-descr__btnholder animate-in-up">
+                    <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="downloads/cv_cristobal_moreno.pdf" target="_blank">
+                      <span class="btn-caption">Descargar CV</span>
+                      <i class="ph-bold ph-download-simple"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Información Personal -->
+                <div class="col-12 col-xl-4 grid-item about-info">
+                  <div class="about-info__item animate-in-up">
+                    <h6>
+                      <small class="top">Nombre</small>
+                      Cristóbal Moreno Henríquez
+                    </h6>
+                  </div>
+                  <div class="about-info__item animate-in-up">
+                    <h6>
+                      <small class="top">Teléfono</small>
+                      <a class="text-link-bold" href="tel:+56978688266">+56 9 7868 8266</a>
+                    </h6>
+                  </div>
+                  <div class="about-info__item animate-in-up">
+                    <h6>
+                      <small class="top">Email</small>
+                      <a class="text-link-bold" href="mailto:cristobal.morenohz@gmail.com">cristobal.morenohz@gmail.com</a>
+                    </h6>
+                  </div>
+                  <div class="about-info__item animate-in-up">
+                    <h6>
+                      <small class="top">Ubicación</small>
+                      La Serena, Chile
+                    </h6>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Sección de Experiencia -->
+        <section id="resume" class="inner resume">
+          <!-- Título de Experiencia -->
+          <div class="content__block block-large">
+            <p class="h2__subtitle animate-in-up">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8 C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7 C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+              </svg>
+              <span>Experiencia</span>
+            </p>
+            <h2 class="h2__title animate-in-up">Mi trayectoria profesional</h2>
+          </div>
+
+          <!-- Línea de Experiencia Profesional -->
+          <div class="content__block block-large">
+            <div class="container-fluid p-0 resume-lines">
+                      <!-- Experiencia 1 -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Enero 2024 - Actualidad</span>
+              </div>
+              <div class="col-12 col-md-5">
+                <h5 class="resume-lines__title animate-in-up">Desarrollo Web y de Software | Freelancer</h5>
+                <p class="resume-lines__source animate-in-up">Soluciones personalizadas en Shopify e-commerce y desarrollo web.</p>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="small resume-lines__descr animate-in-up">
+                  Creación de tiendas online personalizadas en Shopify, utilizando Liquid custom codes, HTML5, CSS3 y JavaScript.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Desarrollo de secciones personalizadas, instalación de aplicaciones y configuración avanzada para logística y sistemas de pago.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Experiencia en Webflow: diseño y desarrollo de sitios web corporativos y landing pages responsivas, incluyendo personalizaciones avanzadas con HTML, CSS3 y JavaScript.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Desarrollo de software con Nuxt.js y Firebase: creación de plataformas escalables con integración de APIs personalizadas y despliegues en Vercel.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Diseño modular, optimización de rendimiento y soluciones adaptadas a las necesidades del cliente.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Soporte y mantenimiento continuo de software y sitios web.
+                </p>
+                
+              </div>
+            </div>
+
+            <!-- Experiencia 2 -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Septiembre 2023 - Diciembre 2023</span>
+              </div>
+              <div class="col-12 col-md-5">
+                <h5 class="resume-lines__title animate-in-up">Desarrollador de Software y Soporte en Terreno | R y C Consultores Asociados</h5>
+                <p class="resume-lines__source animate-in-up">Desarrollo de software y mantenimiento de sistemas en AFPs.</p>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="small resume-lines__descr animate-in-up">
+                  Desarrollo de software con Node.js, Next.js, TypeScript, React, y MongoDB bajo metodología Scrum. Soporte técnico en terreno para mantenimiento de sistemas de tickets y tótems.
+                </p>
+              </div>
+            </div>
+
+            <!-- Experiencia 3 -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Enero 2023 - Abril 2023</span>
+              </div>
+              <div class="col-12 col-md-5">
+                <h5 class="resume-lines__title animate-in-up">Desarrollador de Software | Construapp Technology</h5>
+                <p class="resume-lines__source animate-in-up">Soluciones tecnológicas para la industria de la construcción.</p>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="small resume-lines__descr animate-in-up">
+                  Desarrollo de soluciones informáticas en backend y frontend para sistemas ERP enfocados en construcción y minería, utilizando HTML, CSS, JavaScript, PHP, y Ajax.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Implementación y mantenimiento de bases de datos con phpMyAdmin, garantizando eficiencia y seguridad en el manejo de información empresarial.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Diseño, desarrollo y mantenimiento de funcionalidades para satisfacer las necesidades del negocio y requisitos específicos de los clientes.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Colaboración con un equipo multidisciplinario, incluyendo practicantes, desarrolladores, analistas de sistemas y product managers, asegurando una integración efectiva del software con otras tecnologías.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">
+                  Enfoque en calidad, seguridad, cumplimiento de plazos y resolución de problemas, adaptándose a los cambios y fomentando un aprendizaje continuo.
+                </p>
+                
+              </div>
+            </div>
+
+
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+        <section id="skills" class="inner skills">
+           <!-- Content Block - H3 Block Start -->
+           <div class="content__block">
+            <div class="section-h3 section-h3-grid">
+              <h3 class="h3__title animate-in-up">Tecnologías que uso</h3>
+            </div>
+          </div>
+          <!-- Content Block - H3 Block End -->
+           
+          <!-- Content Block - Tools List Start -->
+<div class="content__block grid-block block-large">
+<!-- Tools List Start -->
+<div class="tools-cards d-flex justify-content-start flex-wrap">
+  <!-- Tools single item -->
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/shopify.svg" alt="Shopify">
+      <h6 class="tools-cards__caption animate-in-up">Shopify</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/liquid.png" alt="Liquid">
+      <h6 class="tools-cards__caption animate-in-up">Liquid</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/js.svg" alt="JavaScript">
+      <h6 class="tools-cards__caption animate-in-up">JavaScript</h6>
+    </div>
+  </div>
+    <!-- tools simgle item -->
+    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+      <div class="tools-cards__card">
+        <img class="tools-cards__icon animate-in-up" src="img/icons/icon-html.svg" alt="Tools Icon">
+        <h6 class="tools-cards__caption animate-in-up">HTML5</h6>
+      </div>
+    </div>
+    <!-- tools simgle item -->
+    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+      <div class="tools-cards__card">
+        <img class="tools-cards__icon animate-in-up" src="img/icons/icon-css.svg" alt="Tools Icon">
+        <h6 class="tools-cards__caption animate-in-up">CSS3</h6>
+      </div>
+    </div>
+
+    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+      <div class="tools-cards__card">
+        <img class="tools-cards__icon animate-in-up" src="img/tech/tailwind.svg" alt="Tailwind CSS">
+        <h6 class="tools-cards__caption animate-in-up">Tailwind CSS</h6>
+      </div>
+    </div>
+
+
+    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+      <div class="tools-cards__card">
+        <img class="tools-cards__icon animate-in-up" src="img/tech/icon-green.svg" alt="Tailwind CSS">
+        <h6 class="tools-cards__caption animate-in-up">Nuxt</h6>
+      </div>
+    </div>
+
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/node.svg" alt="Node.js">
+      <h6 class="tools-cards__caption animate-in-up">Node.js</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/firebase.svg" alt="Firebase">
+      <h6 class="tools-cards__caption animate-in-up">Firebase</h6>
+    </div>
+  </div>
+  
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/webflow.svg" alt="Webflow">
+      <h6 class="tools-cards__caption animate-in-up">Webflow</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/trello.png" alt="Trello">
+      <h6 class="tools-cards__caption animate-in-up">Trello</h6>
+    </div>
+  </div>
+
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/icons/icon-notion.svg" alt="Tools Icon">
+      <h6 class="tools-cards__caption animate-in-up">Notion</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/vercel.svg" alt="Vercel">
+      <h6 class="tools-cards__caption animate-in-up">Vercel</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/github.svg" alt="GitHub">
+      <h6 class="tools-cards__caption animate-in-up">GitHub</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/tech/office.png" alt="Microsoft Office">
+      <h6 class="tools-cards__caption animate-in-up">Microsoft Office</h6>
+    </div>
+  </div>
+</div>
+<!-- Tools List End -->
+</div>
+<!-- Content Block - Tools List End -->
+        </section>
+
+            
+
+
+
+
+       
+
+      </div>
+    </div>
+
+    <!-- Scripts -->|
+    <script src="js/libs.min.js"></script>
+
+
+    
+    <script>
+      /*const translations = {
+        "es": {
+          "smalltitle": "Especialización:",
+          "title": "Cristóbal Moreno Henríquez - Desarrollador Web y de Software",
+          "home": "Inicio",
+          "portfolio": "Portafolio",
+          "about": "Sobre Mí",
+          "experience": "Experiencia",
+          "contact": "Contacto",
+          "lets_talk": "Hablemos",
+          "specialization": "Especialización:",
+          "developer": "Desarrollador Web y de Software",
+          "email": "Email:",
+          "phone": "Teléfono:",
+          "download_cv": "Descargar CV",
+          "hello": "¡Hola! Soy Cristóbal",
+          "intro_title": "Desarrollador Web y de Software",
+          "intro_description": "Apasionado por crear soluciones digitales de alta calidad y brindar experiencias innovadoras en el mundo del desarrollo web y software.",
+          "view_portfolio": "Ver Portafolio",
+          "featured_projects": "Mis proyectos destacados",
+          "about_me": "Sobre Mí",
+          "about_title": "Apasionado por la tecnología y el desarrollo",
+          "about_description_1": "Como profesional, mi principal motivación es ofrecer soluciones de calidad a mis clientes, mientras sigo desarrollándome y aprendiendo en cada proyecto.",
+          "about_description_2": "Disfruto transformar y materializar ideas en proyectos reales.",
+          "about_description_3": "Tengo la capacidad de aprendizaje rápido y una mentalidad orientada hacia los resultados, enfrentando cada desafío con dedicación y compromiso.",
+          "about_description_4": "Aspiro a especializarme en Shopify y tecnologías avanzadas, mientras sigo perfeccionando mis habilidades para entregar resultados y soluciones innovadoras y con un impacto positivo en cada proyecto que realizo.",
+          "experience_title": "Mi trayectoria profesional",
+          "technologies": "Tecnologías que uso",
+          "contact_title": "¡Hablemos sobre tu próximo proyecto!",
+          "location": "Ubicación",
+          "form_name": "Tu Nombre*",
+          "form_company": "Nombre de la Empresa",
+          "form_email": "Correo Electrónico*",
+          "form_phone": "Número de Teléfono*",
+          "form_message": "Tu Mensaje*",
+          "form_send": "Enviar Mensaje",
+          "translate_button": "Español"
+        },
+        "en": {
+          "smalltitle": "Specialization:",
+          "title": "Cristóbal Moreno Henríquez - Web and Software Developer",
+          "home": "Home",
+          "portfolio": "Portfolio",
+          "about": "About Me",
+          "experience": "Experience",
+          "contact": "Contact",
+          "lets_talk": "Let's Talk",
+          "specialization": "Specialization:",
+          "developer": "Web and Software Developer",
+          "email": "Email:",
+          "phone": "Phone:",
+          "download_cv": "Download CV",
+          "hello": "Hello! I'm Cristóbal",
+          "intro_title": "Web and Software Developer",
+          "intro_description": "Passionate about creating high-quality digital solutions and providing innovative experiences in the world of web and software development.",
+          "view_portfolio": "View Portfolio",
+          "featured_projects": "My Featured Projects",
+          "about_me": "About Me",
+          "about_title": "Passionate about Technology and Development",
+          "about_description_1": "As a professional, my main motivation is to offer quality solutions to my clients while continuing to develop and learn in each project.",
+          "about_description_2": "I enjoy transforming and bringing ideas to life in real projects.",
+          "about_description_3": "I have the ability to learn quickly and a results-oriented mindset, facing each challenge with dedication and commitment.",
+          "about_description_4": "I aspire to specialize in Shopify and advanced technologies while continuing to improve my skills to deliver innovative and impactful solutions in every project I undertake.",
+          "experience_title": "My Professional Journey",
+          "technologies": "Technologies I Use",
+          "contact_title": "Let's Talk About Your Next Project!",
+          "location": "Location",
+          "form_name": "Your Name*",
+          "form_company": "Company Name",
+          "form_email": "Email Address*",
+          "form_phone": "Phone Number*",
+          "form_message": "Your Message*",
+          "form_send": "Send Message",
+          "translate_button": "English"
+        }
+      };
+    
+      function setLanguage(lang) {
+    document.title = translations[lang].title;
+    document.querySelectorAll("[data-translate]").forEach(element => {
+      const key = element.getAttribute("data-translate");
+      if (translations[lang][key]) {
+        element.textContent = translations[lang][key];
+      }
+    });
+  }
+
+  document.getElementById("translate-button").addEventListener("click", () => {
+    const currentLang = document.documentElement.lang;
+    const newLang = currentLang === "es" ? "en" : "es";
+    document.documentElement.lang = newLang;
+    setLanguage(newLang);
+  });
+
+  // Inicializa en español
+  setLanguage("es");*/
+    </script>
+    
+    
+    
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const content = document.querySelector('body');
+      const imgLoad = imagesLoaded(content);
+
+      imgLoad.on('done', instance => {
+        document.getElementById("loaderContent").classList.add("fade-out");
+        setTimeout(() => {
+          document.getElementById("loader").classList.add("loaded");
+        }, 300);
+
+        gsap.set(".animate-headline", {y: 50, opacity: 0});
+        ScrollTrigger.batch(".animate-headline", {
+          interval: 0.1,
+          batchMax: 4,
+          duration: 6,
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0,
+            ease: 'sine',
+            stagger: {each: 0.15, grid: [1, 4]}, 
+            overwrite: true
+          }),
+          onLeave: batch => gsap.set(batch, {opacity: 1, y: 0, overwrite: true}),
+          onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
+        });
+
+      });
+    </script>
+    <script src="js/app.js"></script>
+    <script src="js/gallery-init.js"></script>
+
+
+
+
+    
+
+
+
+
+
+  </body>
+
+</html>
