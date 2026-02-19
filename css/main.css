@@ -1118,6 +1118,13 @@ p.additional-text a {
   color: var(--t-medium);
 }
 
+.rounded-tag.tag-construction {
+  background-color: #ffd700;
+  color: #000000;
+  border: 1px solid #ffd700;
+  font-weight: 700;
+}
+
 .text-link {
   color: inherit;
   color: var(--t-medium);
