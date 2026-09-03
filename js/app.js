@@ -389,8 +389,13 @@ $(function () {
 const themeBtn = document.querySelector('.color-switcher');
 
 function getCurrentTheme() {
-  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
+  // Tema oscuro por defecto, independiente de la preferencia del sistema.
+  // Si el usuario ya eligio un tema con el switch, se respeta esa eleccion.
+  let theme = 'dark';
+  const savedTheme = localStorage.getItem('template.theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    theme = savedTheme;
+  }
   return theme;
 }
 
@@ -402,6 +407,7 @@ function loadTheme(theme) {
     themeBtn.innerHTML = `<em></em><i class="ph-bold ph-sun"></i>`;
   }
   root.setAttribute('color-scheme', `${theme}`);
+  themeBtn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
 
   if (typeof updateLogo === 'function') {
     updateLogo(theme);

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es" dir="ltr" color-scheme="dark">
 
 <head>
   <meta charset="UTF-8">
 
   <!-- Título de la página -->
-  <title>Cristóbal Moreno Henríquez - Desarrollador Web y de Software</title>
+  <title>Cristóbal Moreno Henríquez - Desarrollador de Software | Arquitectura de Sistemas y Automatización</title>
 
   <!-- Meta Tags -->
   <meta name="description"
-    content="Portafolio de Cristóbal Moreno Henríquez, desarrollador web y de software especializado en e-commerce y soluciones digitales.">
+    content="Portafolio de Cristóbal Moreno Henríquez, desarrollador de software enfocado en arquitectura de sistemas, automatización de procesos, integración de APIs e infraestructura en AWS y GCP.">
   <meta name="keywords"
-    content="Cristóbal Moreno, desarrollador web, desarrollador de software, Shopify, e-commerce, programador, Chile">
+    content="Cristóbal Moreno, desarrollador de software, arquitectura de sistemas, automatización de procesos, LangGraph, n8n, integración de APIs, FastAPI, Next.js, Nuxt, AWS, GCP, Docker, programador, Chile">
   <meta name="author" content="Cristóbal Moreno Henríquez">
 
   <!-- Viewport Meta-->
@@ -37,20 +37,35 @@
   <!-- Metadata de Redes Sociales -->
   <meta property="og:image:height" content="1200">
   <meta property="og:image:width" content="1200">
-  <meta property="og:title" content="Cristóbal Moreno Henríquez - Portafolio">
+  <meta property="og:title"
+    content="Cristóbal Moreno Henríquez - Desarrollador de Software | Arquitectura de Sistemas y Automatización">
   <meta property="og:description"
-    content="Portafolio de Cristóbal Moreno Henríquez, desarrollador web y de software especializado en soluciones digitales y e-commerce.">
+    content="Desarrollador de software enfocado en arquitectura de sistemas y automatización operativa: plataformas de gestión, dashboards, integración de APIs e infraestructura en AWS y GCP.">
   <meta property="og:url" content="https://cristobalmoreno.cl">
   <meta property="og:image" content="https://cristobalmoreno.cl/img/favicon/og-image.jpg">
+
+  <!-- Tema oscuro por defecto. Se aplica antes del primer pintado para evitar
+       un destello de tema claro; respeta la eleccion guardada del usuario. -->
+  <script>
+    (function () {
+      var theme = 'dark';
+      try {
+        var saved = localStorage.getItem('template.theme');
+        if (saved === 'light' || saved === 'dark') {
+          theme = saved;
+        }
+      } catch (e) { /* localStorage bloqueado: se mantiene el tema oscuro */ }
+      document.documentElement.setAttribute('color-scheme', theme);
+    })();
+  </script>
 
   <!-- Estilos de la plantilla -->
   <link rel="stylesheet" href="css/loaders/loader.css">
   <link rel="stylesheet" type="text/css" href="css/plugins.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
-  <!-- Colores del navegador -->
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <!-- Colores del navegador (tema oscuro por defecto) -->
+  <meta name="theme-color" content="#111111">
   <meta name="msapplication-navbutton-color" content="#111111">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -230,7 +245,7 @@
       <div class="avatar__block">
         <div>
           <small class="top" data-translate="smalltitle">Especialización:</small>
-          <h6 data-translate="title">Desarrollador Web y de Software</h6>
+          <h6 data-translate="title">Arquitectura de Sistemas y Automatización</h6>
         </div>
       </div>
       <br>
@@ -298,10 +313,10 @@
             </svg>
             <span data-translate="">¡Hola! Soy Cristóbal</span>
           </p>
-          <h1 class="headline__title animate-headline">Desarrollador Web y de Software</h1>
+          <h1 class="headline__title animate-headline">Desarrollador de Software</h1>
           <p class="headline__description animate-headline">
-            Apasionado por crear soluciones digitales de alta calidad y brindar experiencias innovadoras en el mundo del
-            desarrollo web y software.
+            Arquitectura de sistemas y automatización operativa. Construyo plataformas de gestión, dashboards e
+            integraciones vía API que eliminan la carga administrativa manual y centralizan la información.
           </p>
           <div class="headline__btnholder d-flex flex-column flex-sm-row">
             <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent animate-headline" href="#portfolio">
@@ -1138,6 +1153,13 @@
                 <h6 class="tools-cards__caption animate-in-up">JavaScript</h6>
               </div>
             </div>
+            <!-- TypeScript -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/typescript.svg" alt="TypeScript">
+                <h6 class="tools-cards__caption animate-in-up">TypeScript</h6>
+              </div>
+            </div>
             <!-- Next.js -->
             <div class="tools-cards__item d-flex grid-item-s animate-card-5">
               <div class="tools-cards__card">
@@ -1159,11 +1181,18 @@
                 <h6 class="tools-cards__caption animate-in-up">Nuxt</h6>
               </div>
             </div>
-            <!-- LangChain -->
+            <!-- Vue -->
             <div class="tools-cards__item d-flex grid-item-s animate-card-5">
               <div class="tools-cards__card">
-                <img class="tools-cards__icon animate-in-up" src="img/tech/langchain-color.png" alt="LangChain">
-                <h6 class="tools-cards__caption animate-in-up">LangChain</h6>
+                <img class="tools-cards__icon animate-in-up" src="img/tech/vuedotjs.svg" alt="Vue">
+                <h6 class="tools-cards__caption animate-in-up">Vue</h6>
+              </div>
+            </div>
+            <!-- LangGraph -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/langchain-color.png" alt="LangGraph">
+                <h6 class="tools-cards__caption animate-in-up">LangGraph</h6>
               </div>
             </div>
             <!-- n8n -->
@@ -1240,6 +1269,55 @@
               <div class="tools-cards__card">
                 <img class="tools-cards__icon animate-in-up" src="img/tech/firebase.svg" alt="Firebase">
                 <h6 class="tools-cards__caption animate-in-up">Firebase</h6>
+              </div>
+            </div>
+            <!-- NestJS -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/nestjs.svg" alt="NestJS">
+                <h6 class="tools-cards__caption animate-in-up">NestJS</h6>
+              </div>
+            </div>
+            <!-- FastAPI -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/fastapi.svg" alt="FastAPI">
+                <h6 class="tools-cards__caption animate-in-up">FastAPI</h6>
+              </div>
+            </div>
+            <!-- PostgreSQL -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/postgresql.svg" alt="PostgreSQL">
+                <h6 class="tools-cards__caption animate-in-up">PostgreSQL</h6>
+              </div>
+            </div>
+            <!-- Supabase -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/supabase.svg" alt="Supabase">
+                <h6 class="tools-cards__caption animate-in-up">Supabase</h6>
+              </div>
+            </div>
+            <!-- Docker -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/docker.svg" alt="Docker">
+                <h6 class="tools-cards__caption animate-in-up">Docker</h6>
+              </div>
+            </div>
+            <!-- AWS -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/aws.svg" alt="AWS">
+                <h6 class="tools-cards__caption animate-in-up">AWS</h6>
+              </div>
+            </div>
+            <!-- Google Cloud -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/tech/googlecloud.svg" alt="Google Cloud">
+                <h6 class="tools-cards__caption animate-in-up">Google Cloud</h6>
               </div>
             </div>
 
